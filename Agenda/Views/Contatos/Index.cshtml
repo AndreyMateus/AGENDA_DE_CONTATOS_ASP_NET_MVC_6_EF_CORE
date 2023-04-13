@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Contato>
+
+@{
+    ViewData["Title"] = "Listagem de contatos";
+}
+
+<h2>Contatos</h2>
+<p>
+    <a asp-action="Criar" class="btn btn-success">Novo Contato</a>
+</p>
+<table class="table">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">@Html.DisplayNameFor(model => model.Id)</th>
+        <th scope="col">@Html.DisplayNameFor(model => model.Nome)</th>
+        <th scope="col">@Html.DisplayNameFor(model => model.Telefone)</th>
+        <th scope="col">@Html.DisplayNameFor(model => model.Ativo)</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (Contato contato in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => contato.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => contato.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(model => contato.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(model => contato.Ativo)
+            </td>
+            <td>
+                <a asp-controller="Contatos" asp-action="Editar" asp-route-id="@contato.Id" class="btn btn-warning">Editar</a>
+                <a asp-controller="Contatos" asp-action="Excluir" asp-route-id="@contato.Id" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

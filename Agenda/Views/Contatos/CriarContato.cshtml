@@ -1,0 +1,30 @@
+﻿@model Contato
+
+@{
+    ViewData["Title"] = "Criando um contato";
+}
+<a asp-controller="Contatos" asp-action="Index" class="btn btn-dark">Voltar</a>
+<h2>Criando um contato:</h2>
+<form asp-controller="Contatos" asp-action="Salvar" method="POST">
+    <div asp-controller="Contatos" asp-action="Salvar" method="POST" class="form-row">
+        <input asp-for="Id" type="hidden"/>
+        <div class="col">
+            <input type="text" asp-for="Nome" placeholder="Digite seu Nome" class="form-control"/>
+        </div>
+        <div class="col">
+            <input type="tel" asp-for="Telefone" placeholder="Digite seu Número" class="form-control"/>
+        </div>
+
+        <div class="col-sm-10">
+            <div class="form-check">
+
+                <input type="checkbox" asp-for="Ativo" class="form-check-input"/>
+                <label class="form-check-label">
+                    Ativo
+                </label>
+
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-success">Cadastrar Contato</button>
+</form>
