@@ -19,13 +19,4 @@ o projeto de Agenda de Contatos permite que o usuário crie, edite e exclua cont
 6. Execute um `dotnet build`
 7. Execute um `dotnet run`
 
-## Como Utilizar
-Para utilizar o projeto, siga os seguintes passos:
-
-1. Clone o repositório do Github para sua máquina.
-2. Abra o projeto em seu editor de código preferido.
-3. No terminal, execute o seguinte comando para baixar as dependências necessárias: `dotnet restore`
-4. Siga as instruções acima para configurar o banco de dados.
-5. Execute o projeto com o comando `dotnet run`.
-
 [Link: Vídeo Demonstração](https://www.youtube.com/watch?v=CQki26OdHHU)
